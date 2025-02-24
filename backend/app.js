@@ -6,6 +6,8 @@ const transaccionbancaria = require('./view/transaccionbancaria')
 const tiporegistrocontable = require('./view/tiporegistrocontable')
 const registrocontable = require('./view/registrocontable')
 const tipodiscrepancia = require('./view/tipodiscrepancia')
+const conciliacion = require('./view/conciliacion')
+const notification = require('./view/notification')
 const bodyParser = require('body-parser')
 const cors = require('cors')
 const express = require('express')
@@ -23,7 +25,8 @@ app.use(transaccionbancaria)
 app.use(tiporegistrocontable)
 app.use(registrocontable)
 app.use(tipodiscrepancia)
-
+app.use(notification)
+app.use(conciliacion)
 
 app.listen(process.env.PORT,function (){
     console.log("SERVER API "+process.env.PORT)

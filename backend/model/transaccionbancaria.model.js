@@ -1,31 +1,47 @@
 const connDB = require("../config/conn")
 class TransaccionbancariaModel {
-    static async readTransaccionBancaria(cuenta,fecha){
+
+    static async deleteTransaccionBancariaModel(id){
+        try{
+            var conn = await connDB().promise()
+            var sql = "delete from transacciones_bancarias where id_transaccion = '"+id+"'"
+            await conn.query(sql)
+            await conn.end()
+            return true
+        }catch (e) {
+            console.log(e)
+            return false
+        }
+    }
+
+    static async readTransaccionBancariaModel(cuenta,fecha){
         try {
             var sqlCuenta = ""
             var sqlFecha = ""
-            if(cuenta != '' || cuenta != undefined){
+            if(cuenta != '*'){
                 sqlCuenta = " and TB.fk_id_cuenta = '"+cuenta+"' "
             }
 
-            if(fecha != '' || fecha != undefined){
+            if(fecha != '*'){
                 sqlFecha = " and date(TB.fecha) = '"+fecha+"' "
             }
             var conn = await connDB().promise()
-            var sql = "select * from transacciones_bancarias TB where TB.estado = 1 "+sqlCuenta+" "+sqlFecha
+            var sql = "select id_transaccion,fk_tipo_transaccion,fk_id_cuenta,monto,referencia,convert(date(fecha),char(50)) fecha from transacciones_bancarias TB where TB.estado = 1 "+sqlCuenta+" "+sqlFecha
+            console.log(sql)
             var data = await conn.query(sql)
             await conn.end()
-            return data
+            return data[0]
         }catch (e) {
             console.log(e)
             return []
         }
     }
 
-    static async createTransaccionBancariaModel(id_cuenta, fecha, monto, tipo_transaccion, referencia){
+    static async createTransaccionBancariaModel(comprobante,id_cuenta, fecha, monto, tipo_transaccion, referencia){
         try{
             var conn = await connDB().promise()
-            var sql = "insert into transacciones_bancarias(fk_id_cuenta, fecha, monto, fk_tipo_transaccion, referencia) VALUES ('"+id_cuenta+"','"+fecha+"',"+monto+","+tipo_transaccion+",'"+referencia+"')"
+            var sql = "insert into transacciones_bancarias(id_transaccion,fk_id_cuenta, fecha, monto, fk_tipo_transaccion, referencia) " +
+                "VALUES ('"+comprobante+"','"+id_cuenta+"','"+fecha+"',"+monto+","+tipo_transaccion+",'"+referencia+"')"
             await conn.query(sql)
             await conn.end()
             return true

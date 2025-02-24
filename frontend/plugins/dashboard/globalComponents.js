@@ -21,6 +21,11 @@ import Vue from 'vue';
  * You can register global components here and use them as a plugin in your main Vue instance
  */
 
+import lang from 'element-ui/lib/locale/lang/es'
+import locale from 'element-ui/lib/locale'
+
+locale.use(lang)
+
 Vue.component(Badge.name, Badge);
 Vue.component(BaseAlert.name, BaseAlert);
 Vue.component(BaseButton.name, BaseButton);

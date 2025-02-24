@@ -270,7 +270,7 @@
         },
         dates: {
           simple: new Date().toString(),
-          range: '2019-04-19 to 2019-04-24'
+          range: '2019-04-19 hasta 2019-04-24'
         },
         inputs: {
           tags: ['BUCHAREST', 'IASI', 'TIMISOARA'],

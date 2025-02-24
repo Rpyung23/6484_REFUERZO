@@ -3,7 +3,7 @@
     <notifications></notifications>
     <side-bar>
       <template slot-scope="props" slot="links">
-        <sidebar-item
+        <!--<sidebar-item
           :link="{
             name: 'Dashboards',
             icon: 'ni ni-shop text-primary',
@@ -15,6 +15,49 @@
           <sidebar-item
             :link="{ name: 'Alternative', path: '/alternative' }"
           ></sidebar-item>
+        </sidebar-item> -->
+
+        <sidebar-item
+          :link="{
+            name: 'Usuarios',
+            icon: 'ni ni-single-02 text-green',
+            path: '/usuario'
+          }">
+        </sidebar-item>
+
+
+        <sidebar-item
+          :link="{
+            name: 'Cuentas Bancarias',
+            icon: 'ni ni-building text-orange',
+            path: '/banco'
+          }">
+        </sidebar-item>
+
+
+        <sidebar-item
+          :link="{
+            name: 'Recibos Bancarios',
+            icon: 'ni ni-single-copy-04 text-info',
+            path: '/comprobante'
+          }">
+        </sidebar-item>
+
+
+        <sidebar-item
+          :link="{
+            name: 'Libro Contable',
+            icon: 'ni ni-collection text-dark',
+            path: '/libro'
+          }">
+        </sidebar-item>
+
+        <sidebar-item
+          :link="{
+            name: 'Conciliación',
+            icon: 'ni ni-curved-next text-danger',
+            path: '/conciliacion'
+          }">
         </sidebar-item>
 
         <sidebar-item :link="{
@@ -73,6 +116,7 @@
           <sidebar-item :link="{ name: 'Google', path: '/maps/google' }"/>
           <sidebar-item :link="{ name: 'Vector', path: '/maps/vector' }"/>
         </sidebar-item>
+
         <sidebar-item
           :link="{
             name: 'Widgets',
@@ -80,6 +124,7 @@
             path: '/widgets'
           }">
         </sidebar-item>
+
         <sidebar-item
           :link="{
             name: 'Charts',
@@ -142,7 +187,6 @@
       <div @click="$sidebar.displaySidebar(false)">
         <nuxt></nuxt>
       </div>
-      <content-footer v-if="!$route.meta.hideFooter"></content-footer>
     </div>
   </div>
 </template>

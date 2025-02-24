@@ -3,7 +3,7 @@ class CuentabancariaModel {
     static async readCuentaBancariaModel(){
         try {
             var conn = await connDB().promise()
-            var sql = "select * from cuenta_bancaria as C where C.estado = 1"
+            var sql = "select *,if(C.tipo_cuenta = 1 ,'AHORRO' , 'CORRIENTE') detalle_tipo_cuenta from cuenta_bancaria as C where C.estado = 1"
             var data = await conn.query(sql)
             await conn.end()
             return data[0]
@@ -17,7 +17,7 @@ class CuentabancariaModel {
         try {
             var conn = await connDB().promise()
             var sql = "insert into cuenta_bancaria(id_cuenta, banco, tipo_cuenta, saldo_inicial) " +
-                "values ('"+cuenta+"','"+name+"',"+tipo+","+saldo+")"
+                "values ('"+cuenta+"','"+name.toUpperCase().trim()+"',"+tipo+","+saldo+")"
             var data = await conn.query(sql)
             await conn.end()
             return true

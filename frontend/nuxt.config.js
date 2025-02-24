@@ -28,14 +28,14 @@ module.exports = {
   ** Headers of the page
   */
   head: {
-    title: 'Nuxt Argon Dashboard PRO by Creative Tim',
+    title: 'CB',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: 'Nuxt Argon Dashboard PRO - Premium Admin Nuxt.js & Bootstrap 4 Dashboard' }
     ],
     link: [
-      { rel: 'icon', type: 'image/png', href: 'favicon.png' },
+      { rel: 'icon', type: 'image/png', href: 'logo.png' },
       { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700'},
       { rel: 'stylesheet', href: 'https://use.fontawesome.com/releases/v5.6.3/css/all.css', integrity: "sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/", crossorigin: "anonymous"}
     ]
@@ -44,7 +44,7 @@ module.exports = {
   /*
   ** Customize the progress-bar color
   */
-  loading: { color: '#fff' },
+  loading: false,
 
   /*
   ** Global CSS
@@ -68,6 +68,7 @@ module.exports = {
   */
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
+    'cookie-universal-nuxt',
     '@nuxtjs/axios',
     '@nuxtjs/pwa',
   ],
@@ -75,6 +76,11 @@ module.exports = {
   ** Axios module configuration
   */
   axios: {
+    headers: {
+      common: {
+        'Content-Type': 'application/json'
+      }
+    }
     // See https://github.com/nuxt-community/axios-module#options
   },
 
@@ -103,5 +109,12 @@ module.exports = {
         ]
       ]
     }
-  }
+  },
+
+  env: {
+    /*baseUrl: 'http://urbano.vigitracklatam.com:3001',
+    baseUrlPanel: 'http://urbano.vigitracklatam.com:3001',*/
+    baseUrl: process.env.baseUrl || 'http://localhost:3010',
+    mapaCredencial: 'AIzaSyDiTYiL8A_yGvPsgRagMcfmp_QcxTPzR-E'
+}
 }

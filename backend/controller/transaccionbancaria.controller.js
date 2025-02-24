@@ -1,7 +1,16 @@
 const TransaccionbancariaModel = require('../model/transaccionbancaria.model')
 class TransaccionbancariaController {
-    static async createTransaccionBancariaController(id_cuenta, fecha, monto, tipo_transaccion, referencia){
-        return await TransaccionbancariaModel.createTransaccionBancariaModel(id_cuenta, fecha, monto, tipo_transaccion, referencia)
+
+    static async deleteTransaccionBancariaController(id){
+        return await TransaccionbancariaModel.deleteTransaccionBancariaModel(id)
+    }
+
+    static async createTransaccionBancariaController(comprobante,id_cuenta, fecha, monto, tipo_transaccion, referencia){
+        return await TransaccionbancariaModel.createTransaccionBancariaModel(comprobante,id_cuenta, fecha, monto, tipo_transaccion, referencia)
+    }
+
+    static async readTransaccionBancariaController(cuenta,fecha){
+        return await TransaccionbancariaModel.readTransaccionBancariaModel(cuenta,fecha)
     }
 }
 

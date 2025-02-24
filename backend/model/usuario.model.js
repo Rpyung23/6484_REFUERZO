@@ -5,7 +5,7 @@ class UsuarioModel {
     static async readUsuariosModel(){
         try{
             var conn = await connDB().promise()
-            var sql = "select * from usuario"
+            var sql = "select * from usuario inner join rol r on usuario.fk_id_rol = r.id_rol"
             var data = await conn.query(sql)
             await conn.end()
             return data[0]

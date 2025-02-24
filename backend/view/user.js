@@ -5,10 +5,25 @@ const app = express()
 
 app.post('/login',async function(req,res)
 {
-    console.log("API LOGIN")
-    var response = await UsuarioController.loginUsuarioController(req.body.user,req.body.pass)
-    res.status(200).json({status_code:response == null ? 300 : 200,
-    token:Jwt.createToken(response.id_usuario),nombre:response.nombre,email:response.email})
+    try{
+        console.log("API LOGIN")
+        var response = await UsuarioController.loginUsuarioController(req.body.user,req.body.pass)
+        console.log(response)
+        res.status(200).json({status_code:response == null ? 300 : 200,
+            token:Jwt.createToken(response.id_usuario),nombre:response.nombre,email:response.email})
+    }catch (e) {
+        res.status(200).json({status_code:300})
+    }
 })
+
+app.get('/usuarios',Jwt.ensureToken,async function(req,res){
+    try {
+        var response = await UsuarioController.readUsuariosController()
+        res.status(200).json(response)
+    }catch (e) {
+        res.status(200).json([])
+    }
+})
+
 
 module.exports = app

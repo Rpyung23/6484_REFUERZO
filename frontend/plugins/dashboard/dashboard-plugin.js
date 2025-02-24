@@ -8,13 +8,13 @@ import VeeValidate from 'vee-validate';
 import SideBar from '~/components/argon-core/SidebarPlugin';
 import Vue from 'vue';
 // element ui language configuration
-import lang from 'element-ui/lib/locale/lang/en';
+import lang from 'element-ui/lib/locale/lang/es';
 import locale from 'element-ui/lib/locale';
 import './globalDirectives'
 import './globalComponents'
 import { extend } from 'vee-validate';
 import * as rules from 'vee-validate/dist/rules';
-import { messages } from 'vee-validate/dist/locale/en.json';
+import { messages } from 'vee-validate/dist/locale/es.json';
 import { configure } from 'vee-validate';
 
 Object.keys(rules).forEach(rule => {

@@ -51,7 +51,7 @@ export default {
         perPageOptions: [5, 10, 25, 50],
         total: 0
       },
-      propsToSearch: ['name', 'email', 'age'],
+      propsToSearch: ['id_usuario', 'detalle', 'nombre'],
       searchQuery: '',
       searchedData: [],
       fuseSearch: null

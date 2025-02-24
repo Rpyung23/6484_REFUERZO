@@ -1,6 +1,7 @@
 <template>
   <div :class="layoutClass" class="auth-layout">
-    <base-nav
+    <notifications></notifications>
+    <!--<base-nav
       v-model="showMenu"
       type="light"
       :transparent="true"
@@ -95,13 +96,19 @@
          </li>
        </ul>
      </template>
-    </base-nav>
+    </base-nav> -->
 
     <div class="main-content">
+
+      <!--<img srcset="~/static/img/index.png" style="height: 100vh;width: 100%;"> -->
+
       <nuxt></nuxt>
+
     </div>
 
-    <footer class="py-5" id="footer-main">
+    
+
+    <!--<footer class="py-5" id="footer-main">
       <div class="container">
         <div class="row align-items-center justify-content-xl-between">
           <div class="col-xl-6">
@@ -127,7 +134,7 @@
           </div>
         </div>
       </div>
-    </footer>
+    </footer>-->
   </div>
 </template>
 <script>
@@ -182,5 +189,9 @@
 <style lang="scss">
   .auth-layout {
     min-height: 100vh;
+    background-size: cover; /* Ajusta la imagen para que cubra todo */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita que se repita */
+    background-image: url('../static/img/index.png');
   }
 </style>

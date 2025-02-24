@@ -8,7 +8,9 @@ module.exports = {
             req.body.token ||
             req.query.token ||
             req.headers["x-access-token"] ||
+            (req.headers.authorization && req.headers.authorization.split(" ")[1]) ||
             req.params.token;
+        //console.log(tokenApi)
         if (tokenApi) {
             const jwtdecoded = tokenApi
             jwt.verify(jwtdecoded, JWT_PASS_SECRET, (err, decoded) => {
