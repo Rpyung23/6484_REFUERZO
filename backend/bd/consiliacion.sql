@@ -346,13 +346,14 @@ BEGIN
     end if;
 END;
 
-
+use consiliacion;
+select * from conciliaciones;
+select * from cuenta_bancaria;
+SELECT * FROM registros_contables;
 delete  from detalles_conciliacion;
-delete  from conciliaciones;
+INSERT conciliaciones(fk_id_cuenta, fecha_conciliacion, fk_usuario, estado,fechaI,fechaF)
+   VALUES ('12345678',NOW(),'guaman1579@gmail.com',1,'2025-02-01','2025-02-28');
 delete  from transacciones_bancarias;
-
-
-
 
 
 

@@ -261,6 +261,7 @@ export default {
       tableData: [],
       selectedRows: [],
       ModalConciliacion: false,
+      mListaDetalleConciliacion:[],
       ModalDetalleConciliacion: false,
       mSelectCuenta: null,
     };
@@ -293,7 +294,7 @@ export default {
       this.tableData = [];
       try {
         var response = await this.$axios.get(
-          process.env.baseUrl + "/readConciliacion/"+(this.mSelectCuenta == null || this.mSelectCuenta == ''  ? '*' : this.mSelectCuenta),
+          process.env.baseUrl + "/readConciliacion/*",
           {
             headers: {
               "Content-Type": "application/json",
@@ -301,13 +302,15 @@ export default {
             },
           }
         );
-        if (response.data.length > 0) {
+
+        this.tableData.push(...response.data);
+        /*if (response.data.length > 0) {
           for (let index = 0; index < response.data.length; index++) {
             if (response.data[index].estado_c == 3) {
               this.tableData.push(response.data[index]);
             }
           }
-        }
+        }*/
       } catch (error) {
         console.log(error);
       }

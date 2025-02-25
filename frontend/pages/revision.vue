@@ -350,6 +350,7 @@ export default {
             },
           }
         );
+        //this.tableData.push(...response.data);
         if (response.data.length > 0) {
           for (let index = 0; index < response.data.length; index++) {
             if (response.data[index].estado_c == 2) {

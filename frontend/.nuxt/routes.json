@@ -3,231 +3,198 @@
     "name": "alternative",
     "path": "/alternative",
     "component": "V:\\\\ESPOCH\\\\OCTAVO_2024_2025\\\\APP_INFORMATICAS_2\\\\6484_REFUERZO\\\\frontend\\\\pages\\\\alternative.vue",
-    "chunkName": "pages/alternative",
-    "_name": "_606bf0bc"
+    "chunkName": "pages/alternative"
   },
   {
     "name": "aprobado",
     "path": "/aprobado",
     "component": "V:\\\\ESPOCH\\\\OCTAVO_2024_2025\\\\APP_INFORMATICAS_2\\\\6484_REFUERZO\\\\frontend\\\\pages\\\\aprobado.vue",
-    "chunkName": "pages/aprobado",
-    "_name": "_2e11c7b7"
+    "chunkName": "pages/aprobado"
   },
   {
     "name": "banco",
     "path": "/banco",
     "component": "V:\\\\ESPOCH\\\\OCTAVO_2024_2025\\\\APP_INFORMATICAS_2\\\\6484_REFUERZO\\\\frontend\\\\pages\\\\banco.vue",
-    "chunkName": "pages/banco",
-    "_name": "_53d7180a"
+    "chunkName": "pages/banco"
   },
   {
     "name": "calendar",
     "path": "/calendar",
     "component": "V:\\\\ESPOCH\\\\OCTAVO_2024_2025\\\\APP_INFORMATICAS_2\\\\6484_REFUERZO\\\\frontend\\\\pages\\\\calendar.vue",
-    "chunkName": "pages/calendar",
-    "_name": "_77f6253f"
+    "chunkName": "pages/calendar"
   },
   {
     "name": "charts",
     "path": "/charts",
     "component": "V:\\\\ESPOCH\\\\OCTAVO_2024_2025\\\\APP_INFORMATICAS_2\\\\6484_REFUERZO\\\\frontend\\\\pages\\\\charts.vue",
-    "chunkName": "pages/charts",
-    "_name": "_08767116"
+    "chunkName": "pages/charts"
   },
   {
     "name": "comprobante",
     "path": "/comprobante",
     "component": "V:\\\\ESPOCH\\\\OCTAVO_2024_2025\\\\APP_INFORMATICAS_2\\\\6484_REFUERZO\\\\frontend\\\\pages\\\\comprobante.vue",
-    "chunkName": "pages/comprobante",
-    "_name": "_60b61243"
+    "chunkName": "pages/comprobante"
   },
   {
     "name": "conciliacion",
     "path": "/conciliacion",
     "component": "V:\\\\ESPOCH\\\\OCTAVO_2024_2025\\\\APP_INFORMATICAS_2\\\\6484_REFUERZO\\\\frontend\\\\pages\\\\conciliacion.vue",
-    "chunkName": "pages/conciliacion",
-    "_name": "_7d3c02e2"
+    "chunkName": "pages/conciliacion"
   },
   {
     "name": "dashboard",
     "path": "/dashboard",
     "component": "V:\\\\ESPOCH\\\\OCTAVO_2024_2025\\\\APP_INFORMATICAS_2\\\\6484_REFUERZO\\\\frontend\\\\pages\\\\dashboard.vue",
-    "chunkName": "pages/dashboard",
-    "_name": "_2a828c3a"
+    "chunkName": "pages/dashboard"
   },
   {
     "name": "libro",
     "path": "/libro",
     "component": "V:\\\\ESPOCH\\\\OCTAVO_2024_2025\\\\APP_INFORMATICAS_2\\\\6484_REFUERZO\\\\frontend\\\\pages\\\\libro.vue",
-    "chunkName": "pages/libro",
-    "_name": "_074a815e"
+    "chunkName": "pages/libro"
   },
   {
     "name": "lock",
     "path": "/lock",
     "component": "V:\\\\ESPOCH\\\\OCTAVO_2024_2025\\\\APP_INFORMATICAS_2\\\\6484_REFUERZO\\\\frontend\\\\pages\\\\lock.vue",
-    "chunkName": "pages/lock",
-    "_name": "_25b6cd2c"
+    "chunkName": "pages/lock"
   },
   {
     "name": "pricing",
     "path": "/pricing",
     "component": "V:\\\\ESPOCH\\\\OCTAVO_2024_2025\\\\APP_INFORMATICAS_2\\\\6484_REFUERZO\\\\frontend\\\\pages\\\\pricing.vue",
-    "chunkName": "pages/pricing",
-    "_name": "_615ac7d5"
+    "chunkName": "pages/pricing"
   },
   {
     "name": "recuperar",
     "path": "/recuperar",
     "component": "V:\\\\ESPOCH\\\\OCTAVO_2024_2025\\\\APP_INFORMATICAS_2\\\\6484_REFUERZO\\\\frontend\\\\pages\\\\recuperar.vue",
-    "chunkName": "pages/recuperar",
-    "_name": "_bbc337d0"
+    "chunkName": "pages/recuperar"
   },
   {
     "name": "register",
     "path": "/register",
     "component": "V:\\\\ESPOCH\\\\OCTAVO_2024_2025\\\\APP_INFORMATICAS_2\\\\6484_REFUERZO\\\\frontend\\\\pages\\\\register.vue",
-    "chunkName": "pages/register",
-    "_name": "_27311e24"
+    "chunkName": "pages/register"
   },
   {
     "name": "revision",
     "path": "/revision",
     "component": "V:\\\\ESPOCH\\\\OCTAVO_2024_2025\\\\APP_INFORMATICAS_2\\\\6484_REFUERZO\\\\frontend\\\\pages\\\\revision.vue",
-    "chunkName": "pages/revision",
-    "_name": "_42724b5c"
+    "chunkName": "pages/revision"
   },
   {
     "name": "usuario",
     "path": "/usuario",
     "component": "V:\\\\ESPOCH\\\\OCTAVO_2024_2025\\\\APP_INFORMATICAS_2\\\\6484_REFUERZO\\\\frontend\\\\pages\\\\usuario.vue",
-    "chunkName": "pages/usuario",
-    "_name": "_358f273d"
+    "chunkName": "pages/usuario"
   },
   {
     "name": "widgets",
     "path": "/widgets",
     "component": "V:\\\\ESPOCH\\\\OCTAVO_2024_2025\\\\APP_INFORMATICAS_2\\\\6484_REFUERZO\\\\frontend\\\\pages\\\\widgets.vue",
-    "chunkName": "pages/widgets",
-    "_name": "_62fb0b84"
+    "chunkName": "pages/widgets"
   },
   {
     "name": "components-buttons",
     "path": "/components/buttons",
     "component": "V:\\\\ESPOCH\\\\OCTAVO_2024_2025\\\\APP_INFORMATICAS_2\\\\6484_REFUERZO\\\\frontend\\\\pages\\\\components\\\\buttons.vue",
-    "chunkName": "pages/components/buttons",
-    "_name": "_2bfa0cba"
+    "chunkName": "pages/components/buttons"
   },
   {
     "name": "components-cards",
     "path": "/components/cards",
     "component": "V:\\\\ESPOCH\\\\OCTAVO_2024_2025\\\\APP_INFORMATICAS_2\\\\6484_REFUERZO\\\\frontend\\\\pages\\\\components\\\\cards.vue",
-    "chunkName": "pages/components/cards",
-    "_name": "_94f47048"
+    "chunkName": "pages/components/cards"
   },
   {
     "name": "components-grid-system",
     "path": "/components/grid-system",
     "component": "V:\\\\ESPOCH\\\\OCTAVO_2024_2025\\\\APP_INFORMATICAS_2\\\\6484_REFUERZO\\\\frontend\\\\pages\\\\components\\\\grid-system.vue",
-    "chunkName": "pages/components/grid-system",
-    "_name": "_0a7778cf"
+    "chunkName": "pages/components/grid-system"
   },
   {
     "name": "components-icons",
     "path": "/components/icons",
     "component": "V:\\\\ESPOCH\\\\OCTAVO_2024_2025\\\\APP_INFORMATICAS_2\\\\6484_REFUERZO\\\\frontend\\\\pages\\\\components\\\\icons.vue",
-    "chunkName": "pages/components/icons",
-    "_name": "_71408013"
+    "chunkName": "pages/components/icons"
   },
   {
     "name": "components-notifications",
     "path": "/components/notifications",
     "component": "V:\\\\ESPOCH\\\\OCTAVO_2024_2025\\\\APP_INFORMATICAS_2\\\\6484_REFUERZO\\\\frontend\\\\pages\\\\components\\\\notifications.vue",
-    "chunkName": "pages/components/notifications",
-    "_name": "_6bd639e1"
+    "chunkName": "pages/components/notifications"
   },
   {
     "name": "components-typography",
     "path": "/components/typography",
     "component": "V:\\\\ESPOCH\\\\OCTAVO_2024_2025\\\\APP_INFORMATICAS_2\\\\6484_REFUERZO\\\\frontend\\\\pages\\\\components\\\\typography.vue",
-    "chunkName": "pages/components/typography",
-    "_name": "_207ed586"
+    "chunkName": "pages/components/typography"
   },
   {
     "name": "forms-components",
     "path": "/forms/components",
     "component": "V:\\\\ESPOCH\\\\OCTAVO_2024_2025\\\\APP_INFORMATICAS_2\\\\6484_REFUERZO\\\\frontend\\\\pages\\\\forms\\\\components.vue",
-    "chunkName": "pages/forms/components",
-    "_name": "_4dd8d414"
+    "chunkName": "pages/forms/components"
   },
   {
     "name": "forms-elements",
     "path": "/forms/elements",
     "component": "V:\\\\ESPOCH\\\\OCTAVO_2024_2025\\\\APP_INFORMATICAS_2\\\\6484_REFUERZO\\\\frontend\\\\pages\\\\forms\\\\elements.vue",
-    "chunkName": "pages/forms/elements",
-    "_name": "_5e245af5"
+    "chunkName": "pages/forms/elements"
   },
   {
     "name": "forms-validation",
     "path": "/forms/validation",
     "component": "V:\\\\ESPOCH\\\\OCTAVO_2024_2025\\\\APP_INFORMATICAS_2\\\\6484_REFUERZO\\\\frontend\\\\pages\\\\forms\\\\validation.vue",
-    "chunkName": "pages/forms/validation",
-    "_name": "_2b17a012"
+    "chunkName": "pages/forms/validation"
   },
   {
     "name": "maps-google",
     "path": "/maps/google",
     "component": "V:\\\\ESPOCH\\\\OCTAVO_2024_2025\\\\APP_INFORMATICAS_2\\\\6484_REFUERZO\\\\frontend\\\\pages\\\\maps\\\\google.vue",
-    "chunkName": "pages/maps/google",
-    "_name": "_024c845e"
+    "chunkName": "pages/maps/google"
   },
   {
     "name": "maps-vector",
     "path": "/maps/vector",
     "component": "V:\\\\ESPOCH\\\\OCTAVO_2024_2025\\\\APP_INFORMATICAS_2\\\\6484_REFUERZO\\\\frontend\\\\pages\\\\maps\\\\vector.vue",
-    "chunkName": "pages/maps/vector",
-    "_name": "_5b73abdb"
+    "chunkName": "pages/maps/vector"
   },
   {
     "name": "pages-timeline",
     "path": "/pages/timeline",
     "component": "V:\\\\ESPOCH\\\\OCTAVO_2024_2025\\\\APP_INFORMATICAS_2\\\\6484_REFUERZO\\\\frontend\\\\pages\\\\pages\\\\timeline.vue",
-    "chunkName": "pages/pages/timeline",
-    "_name": "_c90097d8"
+    "chunkName": "pages/pages/timeline"
   },
   {
     "name": "pages-user",
     "path": "/pages/user",
     "component": "V:\\\\ESPOCH\\\\OCTAVO_2024_2025\\\\APP_INFORMATICAS_2\\\\6484_REFUERZO\\\\frontend\\\\pages\\\\pages\\\\user.vue",
-    "chunkName": "pages/pages/user",
-    "_name": "_9bdde7c4"
+    "chunkName": "pages/pages/user"
   },
   {
     "name": "tables-paginated",
     "path": "/tables/paginated",
     "component": "V:\\\\ESPOCH\\\\OCTAVO_2024_2025\\\\APP_INFORMATICAS_2\\\\6484_REFUERZO\\\\frontend\\\\pages\\\\tables\\\\paginated.vue",
-    "chunkName": "pages/tables/paginated",
-    "_name": "_fc7473d2"
+    "chunkName": "pages/tables/paginated"
   },
   {
     "name": "tables-regular",
     "path": "/tables/regular",
     "component": "V:\\\\ESPOCH\\\\OCTAVO_2024_2025\\\\APP_INFORMATICAS_2\\\\6484_REFUERZO\\\\frontend\\\\pages\\\\tables\\\\regular.vue",
-    "chunkName": "pages/tables/regular",
-    "_name": "_0487d7e6"
+    "chunkName": "pages/tables/regular"
   },
   {
     "name": "tables-sortable",
     "path": "/tables/sortable",
     "component": "V:\\\\ESPOCH\\\\OCTAVO_2024_2025\\\\APP_INFORMATICAS_2\\\\6484_REFUERZO\\\\frontend\\\\pages\\\\tables\\\\sortable.vue",
-    "chunkName": "pages/tables/sortable",
-    "_name": "_06d9c51e"
+    "chunkName": "pages/tables/sortable"
   },
   {
     "name": "index",
     "path": "/",
     "component": "V:\\\\ESPOCH\\\\OCTAVO_2024_2025\\\\APP_INFORMATICAS_2\\\\6484_REFUERZO\\\\frontend\\\\pages\\\\index.vue",
-    "chunkName": "pages/index",
-    "_name": "_c9e0c6be"
+    "chunkName": "pages/index"
   }
 ]
