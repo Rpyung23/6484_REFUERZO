@@ -52,7 +52,7 @@
 
               <div class="row mt-3">
                 <div class="col-6">
-                  <router-link to="/dashboard" class="text-default"
+                  <router-link to="/recuperar" class="text-default"
                     ><small>Recuperar contraseña?</small></router-link
                   >
                 </div>
@@ -86,6 +86,8 @@ export default {
 
         if (response.data.status_code == 200) {
           this.$cookies.set("tokenCB", response.data.token);
+          this.$cookies.set("estado_user_CB",response.data.estado);
+          this.$cookies.set("rol_user_CB",response.data.rol);
           this.$router.push("/dashboard");
         } else {
           this.$notify({

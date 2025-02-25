@@ -1,12 +1,23 @@
 const connDB = require("../config/conn")
 
 class ConciliacionModel {
-    static async readConciliacionModel(){
+    static async readConciliacionModel(cuenta)
+    {
         try{
+
+            var sqlCuenta = ""
+            console.log("CUENTa : "+cuenta)
+
+            if(cuenta != '*'){
+                sqlCuenta = " and fk_id_cuenta = '"+cuenta+"' "
+            }
+
+
             var conn = await connDB().promise()
             var sql = "select *,C.estado estado_c,concat(date(fechaI),' - ',date(fechaF)) rangoFecha," +
                 "convert(date(fecha_conciliacion),char(50))  fecha_conciliacion_string,U.nombre from conciliaciones as C " +
-                "inner join usuario as U on C.fk_usuario = U.id_usuario where C.estado != 0;"
+                "inner join usuario as U on C.fk_usuario = U.id_usuario where C.estado = 1 "+sqlCuenta
+            console.log(sql)
             var response = await conn.query(sql)
             await conn.end()
             return response[0]

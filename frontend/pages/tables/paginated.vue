@@ -44,7 +44,7 @@
               <div>
                 <base-input v-model="searchQuery"
                             prepend-icon="fas fa-search"
-                            placeholder="Search...">
+                            placeholder="Busqueda...">
                 </base-input>
               </div>
             </div>

@@ -18,49 +18,76 @@
         </sidebar-item> -->
 
         <sidebar-item
+          v-if="oRol == 1 || oRol == 4"
           :link="{
             name: 'Usuarios',
             icon: 'ni ni-single-02 text-green',
-            path: '/usuario'
-          }">
+            path: '/usuario',
+          }"
+        >
         </sidebar-item>
 
-
         <sidebar-item
+          v-if="oRol == 1 || oRol == 3 || oRol == 4"
           :link="{
             name: 'Cuentas Bancarias',
             icon: 'ni ni-building text-orange',
-            path: '/banco'
-          }">
+            path: '/banco',
+          }"
+        >
         </sidebar-item>
 
-
         <sidebar-item
+          v-if="oRol == 1 || oRol == 2"
           :link="{
             name: 'Recibos Bancarios',
             icon: 'ni ni-single-copy-04 text-info',
-            path: '/comprobante'
-          }">
+            path: '/comprobante',
+          }"
+        >
         </sidebar-item>
 
-
         <sidebar-item
+          v-if="oRol == 1 || oRol == 2"
           :link="{
             name: 'Libro Contable',
             icon: 'ni ni-collection text-dark',
-            path: '/libro'
-          }">
+            path: '/libro',
+          }"
+        >
         </sidebar-item>
 
         <sidebar-item
+          v-if="oRol == 1 || oRol == 2"
           :link="{
             name: 'Conciliación',
             icon: 'ni ni-curved-next text-danger',
-            path: '/conciliacion'
-          }">
+            path: '/conciliacion',
+          }"
+        >
         </sidebar-item>
 
-        <sidebar-item :link="{
+        <sidebar-item
+          v-if="oRol == 1 || oRol == 3"
+          :link="{
+            name: 'C. Revisión',
+            icon: 'ni ni-collection text-success',
+            path: '/revision',
+          }"
+        >
+        </sidebar-item>
+
+        <sidebar-item
+          v-if="oRol == 1 || oRol == 4"
+          :link="{
+            name: 'C. Aprobados',
+            icon: 'ni ni-check-bold text-primary',
+            path: '/aprobado',
+          }"
+        >
+        </sidebar-item>
+
+        <!--<sidebar-item :link="{
                   name: 'Examples',
                   icon: 'ni ni-ungroup text-orange'
                   }">
@@ -139,10 +166,10 @@
             icon: 'ni ni-calendar-grid-58 text-red',
             path: '/calendar'
           }">
-        </sidebar-item>
+        </sidebar-item> -->
       </template>
 
-      <template slot="links-after">
+      <!--<template slot="links-after">
         <hr class="my-3">
         <h6 class="navbar-heading p-0 text-muted">Documentation</h6>
 
@@ -179,61 +206,160 @@
             </a>
           </li>
         </ul>
-      </template>
+      </template> -->
     </side-bar>
     <div class="main-content">
-      <dashboard-navbar :type="$route.name === 'alternative' ? 'light': 'default'"></dashboard-navbar>
+      <dashboard-navbar
+        :type="$route.name === 'alternative' ? 'light' : 'default'"
+      ></dashboard-navbar>
 
       <div @click="$sidebar.displaySidebar(false)">
         <nuxt></nuxt>
       </div>
     </div>
+
+    <modal
+      :show.sync="isModalPass"
+      modal-classes="static modal-dialog-centered modal-sm"
+      :banderaCloseMouseClickAfuera="false"
+    >
+      <h5 slot="header" class="modal-title" id="modal-title-default">
+        Actualizar Contraseña
+      </h5>
+      <div>
+        <base-input
+          label="Nueva Contraseña"
+          placeholder="Nueva Contraseña"
+          name="Nueva Contraseña"
+          required
+          minlength="6"
+          v-model="nueva_pass"
+          input-classes="form-control-alternative new-event--title"
+        >
+        </base-input>
+        <base-input
+          label="Repetir Contraseña"
+          placeholder="Repetir Contraseña"
+          name="Repetir Contraseña"
+          required
+          minlength="6"
+          v-model="repet_pass"
+          input-classes="form-control-alternative new-event--title"
+        >
+        </base-input>
+      </div>
+
+      <template slot="footer">
+        <base-button @click="updatePass()" type="primary" class="new-event--add"
+          >Actualizar Contraseña</base-button
+        >
+      </template>
+    </modal>
   </div>
 </template>
 <script>
-  /* eslint-disable no-new */
-  import PerfectScrollbar from 'perfect-scrollbar';
-  import 'perfect-scrollbar/css/perfect-scrollbar.css';
+/* eslint-disable no-new */
+import PerfectScrollbar from "perfect-scrollbar";
+import "perfect-scrollbar/css/perfect-scrollbar.css";
 
-  function hasElement(className) {
-    return document.getElementsByClassName(className).length > 0;
+function hasElement(className) {
+  return document.getElementsByClassName(className).length > 0;
+}
+
+function initScrollbar(className) {
+  if (hasElement(className)) {
+    new PerfectScrollbar(`.${className}`);
+  } else {
+    // try to init it later in case this component is loaded async
+    setTimeout(() => {
+      initScrollbar(className);
+    }, 100);
   }
+}
 
-  function initScrollbar(className) {
-    if (hasElement(className)) {
-      new PerfectScrollbar(`.${className}`);
-    } else {
-      // try to init it later in case this component is loaded async
-      setTimeout(() => {
-        initScrollbar(className);
-      }, 100);
-    }
-  }
+import DashboardNavbar from "~/components/layouts/argon/DashboardNavbar.vue";
+import ContentFooter from "~/components/layouts/argon/ContentFooter.vue";
+import DashboardContent from "~/components/layouts/argon/Content.vue";
 
-  import DashboardNavbar from '~/components/layouts/argon/DashboardNavbar.vue';
-  import ContentFooter from '~/components/layouts/argon/ContentFooter.vue';
-  import DashboardContent from '~/components/layouts/argon/Content.vue';
-
-  export default {
-    components: {
-      DashboardNavbar,
-      ContentFooter,
-      DashboardContent
-    },
-    methods: {
-      initScrollbar() {
-        let isWindows = navigator.platform.startsWith('Win');
-        if (isWindows) {
-          initScrollbar('navbar-inner');
-          initScrollbar('main-content');
-          initScrollbar('sidenav');
-        }
+export default {
+  components: {
+    DashboardNavbar,
+    ContentFooter,
+    DashboardContent,
+  },
+  data() {
+    return {
+      oRol: null,
+      isModalPass: false,
+      nueva_pass: null,
+      repet_pass: null,
+      token: this.$cookies.get("tokenCB"),
+    };
+  },
+  methods: {
+    initScrollbar() {
+      let isWindows = navigator.platform.startsWith("Win");
+      if (isWindows) {
+        initScrollbar("navbar-inner");
+        initScrollbar("main-content");
+        initScrollbar("sidenav");
       }
     },
-    mounted() {
-      this.initScrollbar()
+    async updatePass() {
+      try {
+        if (this.nueva_pass != this.repet_pass) {
+          //alert("ssa")
+          
+          this.$notify({
+            title: "ERROR CONTRASEÑA",
+            message: "Lo sentimos su contraseña no coincide",
+            type: "danger",
+          });
+          return;
+        }
+
+        var response = await this.$axios.put(
+          process.env.baseUrl + "/update_pass",
+          {
+            token: this.token,
+            contrasenia: this.nueva_pass,
+          }
+        )
+
+        if (response.data.status_code == 200) {
+          this.$cookies.remove("estado_user_gipac");
+          this.isModalPass = false;
+          this.$notify({
+            title: "NUEVA CONTRASEÑA",
+            message: "CONTRASEÑA ACTUALIZADA CON EXITO",
+            type: "success",
+          });
+        } else {
+          this.$notify({
+            title: "NUEVA CONTRASEÑA",
+            message: response.data.msm,
+            type: "danger",
+          });
+        }
+      } catch (error) {
+        console.log(error)
+        this.$notify({
+          title: "ERROR CONTRASEÑA",
+          message: error.toString(),
+          type: "danger",
+        });
+      }
+    },
+  },
+  mounted() {
+    this.initScrollbar();
+    var token = this.$cookies.get("tokenCB");
+    var estado = this.$cookies.get("estado_user_CB");
+    if (estado == 2) {
+      this.isModalPass = true;
     }
-  };
+    this.oRol = this.$cookies.get("rol_user_CB");
+  },
+};
 </script>
-<style lang="scss">
-</style>
+<style lang="scss"></style>

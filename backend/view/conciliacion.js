@@ -3,9 +3,9 @@ const express = require('express')
 const app = express()
 const Jwt = require('../config/jwt')
 
-app.get('/readConciliacion',Jwt.ensureToken,async function(req,res){
+app.get('/readConciliacion/:cuenta',Jwt.ensureToken,async function(req,res){
     try{
-        var response = await ConciliacionController.readConciliacionController()
+        var response = await ConciliacionController.readConciliacionController(req.params.cuenta)
         res.status(200).json(response)
     }catch (e) {
         console.log(e)

@@ -1,7 +1,7 @@
 const ConciliacionModel = require('../model/conciliacion.model')
 class ConciliacionController {
-    static async readConciliacionController(){
-        return await ConciliacionModel.readConciliacionModel()
+    static async readConciliacionController(cuenta){
+        return await ConciliacionModel.readConciliacionModel(cuenta)
     }
 
     static async aprobar_revisionConciliacionController(id_conciliacion,estado){

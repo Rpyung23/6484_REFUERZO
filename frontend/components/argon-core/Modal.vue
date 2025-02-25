@@ -49,7 +49,7 @@
     },
     props: {
       show: Boolean,
-      showClose: {
+      banderaCloseMouseClickAfuera: {
         type: Boolean,
         default: true
       },
@@ -102,8 +102,9 @@
     },
     methods: {
       closeModal() {
-        this.$emit("update:show", false);
-        this.$emit("close");
+        if(this.banderaCloseMouseClickAfuera)
+        {this.$emit("update:show", false);
+        this.$emit("close");}
       }
     },
     watch: {
